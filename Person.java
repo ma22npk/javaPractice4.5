@@ -1,6 +1,9 @@
 class Person {
   public static int count = 0;
-  public String firstName, lastName;
+  public String firstName;
+  // インスタンスフィールドmiddleNameを定義してください
+  public String middleName;
+  public String lastName;
   public int age;
   public double height, weight;
 
@@ -11,6 +14,17 @@ class Person {
     this.age = age;
     this.height = height;
     this.weight = weight;
+  }
+
+  // middleNameを受け取るコンストラクタを定義してください
+  Person(String firstName, String middleName, String lastName, int age, double height, double weight) {
+    Person.count++;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.height = height;
+    this.weight = weight;
+    this.middleName = middleName;
   }
 
   public String fullName() {
@@ -27,7 +41,6 @@ class Person {
     return this.weight / this.height / this.height;
   }
 
-  // クラスメソッドprintCount()を定義してください
   public static void printCount() {
     System.out.println("合計" + Person.count + "人です");
   }
