@@ -1,7 +1,6 @@
 class Person {
   public static int count = 0;
   public String firstName;
-  // インスタンスフィールドmiddleNameを定義してください
   public String middleName;
   public String lastName;
   public int age;
@@ -16,14 +15,9 @@ class Person {
     this.weight = weight;
   }
 
-  // middleNameを受け取るコンストラクタを定義してください
   Person(String firstName, String middleName, String lastName, int age, double height, double weight) {
-    Person.count++;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-    this.height = height;
-    this.weight = weight;
+    // this()を用いて、コンストラクタを呼び出してください
+    this(firstName, lastName, age, height, weight);
     this.middleName = middleName;
   }
 
@@ -45,7 +39,6 @@ class Person {
     System.out.println("合計" + Person.count + "人です");
   }
 }
-
 // クラスフィールド [START] ========================================
 // 何人分のインスタンスを生成したか数えるために、countというフィールドで、インスタンスの生成回数を保存するようにしてみます。countは個々のインスタンスが持つものではなく、Personクラスが持っていればよいので、クラスフィールドにしてあげましょう。
 //フィールドに初期値を設定する
