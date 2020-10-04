@@ -6,7 +6,7 @@ class Main {
     Person person2 = new Person("John", "Smith", 65, 1.75, 80.0);
     person2.printData();
 
-    // 「合計◯◯人です」と出力してください
-    System.out.println("合計" + Person.count + "人です");
+    // printCountメソッドを呼び出してください
+    Person.printCount();
   }
 }
