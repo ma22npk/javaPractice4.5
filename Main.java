@@ -6,7 +6,10 @@ class Main {
     person2.printData();
 
     System.out.println("----------------------");
-    // person2に対して、getMiddleNameメソッドを呼び出し、「person2のミドルネームは◯◯です」と出力してください
+    // person1のmiddleNameフィールドの値を「Claire」にしてください
+    person1.setMiddleName("Claire");
 
+    System.out.println("ミドルネームを" + person1.getMiddleName() + "に変更しました");
+    person1.printData();
   }
 }

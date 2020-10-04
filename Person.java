@@ -21,9 +21,13 @@ class Person {
     this.middleName = middleName;
   }
 
-  // middleNameフィールドのゲッターを定義してください
   public String getMiddleName() {
     return this.middleName;
+  }
+
+  // middleNameフィールドのセッターを定義してください
+  public void setMiddleName(String middleName) {
+    this.middleName = middleName;
   }
 
   public String fullName() {
@@ -48,10 +52,3 @@ class Person {
     System.out.println("合計" + Person.count + "人です");
   }
 }
-
-// クラスフィールド [START] ========================================
-// 何人分のインスタンスを生成したか数えるために、countというフィールドで、インスタンスの生成回数を保存するようにしてみます。countは個々のインスタンスが持つものではなく、Personクラスが持っていればよいので、クラスフィールドにしてあげましょう。
-//フィールドに初期値を設定する
-// フィールドには、定義時に初期値を設定しておくことができます。
-// countはインスタンスの生成回数なので、下図のように定義時に0を代入しておきましょう。
-// クラスフィールド [END] ==========================================
