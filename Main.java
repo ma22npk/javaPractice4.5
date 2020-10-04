@@ -4,6 +4,9 @@ class Main {
     person1.printData();
     Person person2 = new Person("John", "Christopher", "Smith", 65, 1.75, 80.0);
     person2.printData();
-    Person.printCount();
+
+    System.out.println("----------------------");
+    // person2に対して、getMiddleNameメソッドを呼び出し、「person2のミドルネームは◯◯です」と出力してください
+
   }
 }
