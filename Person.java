@@ -1,10 +1,12 @@
 class Person {
-  public static int count = 0;
-  public String firstName;
-  public String middleName;
-  public String lastName;
-  public int age;
-  public double height, weight;
+  // 以下をすべてprivateなフィールドに書き換えてください
+  private static int count = 0;
+  private String firstName;
+  private String middleName;
+  private String lastName;
+  private int age;
+  private double height;
+  private double weight;
 
   Person(String firstName, String lastName, int age, double height, double weight) {
     Person.count++;
@@ -21,7 +23,6 @@ class Person {
   }
 
   public String fullName() {
-    // 以下を、middleNameがない場合とある場合で条件分岐を行ってください
     if (this.middleName == null) {
       return this.firstName + " " + this.lastName;
     } else {
@@ -32,8 +33,6 @@ class Person {
   public void printData() {
     System.out.println("私の名前は" + this.fullName() + "です");
     System.out.println("年齢は" + this.age + "歳です");
-    System.out.println("身長は" + this.height + "mです");
-    System.out.println("体重は" + this.weight + "kgです");
     System.out.println("BMIは" + Math.round(this.bmi()) + "です");
   }
 
@@ -45,7 +44,6 @@ class Person {
     System.out.println("合計" + Person.count + "人です");
   }
 }
-
 // クラスフィールド [START] ========================================
 // 何人分のインスタンスを生成したか数えるために、countというフィールドで、インスタンスの生成回数を保存するようにしてみます。countは個々のインスタンスが持つものではなく、Personクラスが持っていればよいので、クラスフィールドにしてあげましょう。
 //フィールドに初期値を設定する
